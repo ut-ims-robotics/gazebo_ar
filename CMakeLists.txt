@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(gazebo_ar)
+project(ar_tf)
 
 
 
@@ -25,11 +25,13 @@ catkin_package()
 link_directories(${GAZEBO_LIBRARY_DIRS})
 list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
 
-add_executable(translator src/translator.cc)
-target_link_libraries(translator ${GAZEBO_LIBRARIES} pthread)
-target_link_libraries(translator ${catkin_LIBRARIES})
+add_executable(single_tag src/single_tag.cpp)
+target_link_libraries(single_tag ${GAZEBO_LIBRARIES} pthread)
+target_link_libraries(single_tag ${catkin_LIBRARIES})
 
-
+add_executable(multiple_tags src/multiple_tags.cpp)
+target_link_libraries(multiple_tags ${GAZEBO_LIBRARIES} pthread)
+target_link_libraries(multiple_tags ${catkin_LIBRARIES})
 
 
 
