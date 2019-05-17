@@ -1,0 +1,8 @@
+<launch>
+<node name="tag_to_cam_pose" pkg="gazebo_ar" type="tag_to_cam_pose" output="screen" />
+
+<rosparam command="load" file="$(find gazebo_ar)/config/tag_config.yaml" />
+
+<node pkg="tf" type="static_transform_publisher" name="cam_to_sim_cam" args="0 0.02 0.03 0 -1.57 1.57 usb_cam sim_cam 100"/>
+
+</launch>

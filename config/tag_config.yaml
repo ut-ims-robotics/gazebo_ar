@@ -1,0 +1,4 @@
+ar_marker_6: {x : 0, y: 0, z: 0, roll: 0, pitch: 0, yaw : 0}
+ar_marker_4: {x : -0.29, y: -0.29, z: 0, roll: 0, pitch: 0, yaw : 0}
+ar_marker_2: {x : -0.58, y: -0.58, z: 0, roll: 0, pitch: 0, yaw : 0}
+markers_used: [ar_marker_6, ar_marker_4, ar_marker_2]

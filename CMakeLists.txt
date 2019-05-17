@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ar_tf)
+project(gazebo_ar)
 
 
 
@@ -25,13 +25,9 @@ catkin_package()
 link_directories(${GAZEBO_LIBRARY_DIRS})
 list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
 
-add_executable(single_tag src/single_tag.cpp)
-target_link_libraries(single_tag ${GAZEBO_LIBRARIES} pthread)
-target_link_libraries(single_tag ${catkin_LIBRARIES})
-
-add_executable(multiple_tags src/multiple_tags.cpp)
-target_link_libraries(multiple_tags ${GAZEBO_LIBRARIES} pthread)
-target_link_libraries(multiple_tags ${catkin_LIBRARIES})
+add_executable(tag_to_cam_pose src/tag_to_cam_pose.cpp)
+target_link_libraries(tag_to_cam_pose ${GAZEBO_LIBRARIES} pthread)
+target_link_libraries(tag_to_cam_pose ${catkin_LIBRARIES})
 
 
 
